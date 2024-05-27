@@ -1,0 +1,802 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7647166A2C04CF8C008C429A /* MDConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 764716692C04CF8C008C429A /* MDConfig.plist */; };
+		764716742C04CF8C008C429A /* libTweetieDylib.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 764716732C04CF8C008C429A /* libTweetieDylib.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		764716792C04CF8C008C429A /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764716782C04CF8C008C429A /* JavaScriptCore.framework */; };
+		7647167B2C04CF8C008C429A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7647167A2C04CF8C008C429A /* Foundation.framework */; };
+		7647167D2C04CF8C008C429A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7647167C2C04CF8C008C429A /* UIKit.framework */; };
+		764716822C04CF8C008C429A /* TweetieDylib.mm in Sources */ = {isa = PBXBuildFile; fileRef = 764716812C04CF8C008C429A /* TweetieDylib.mm */; };
+		764716852C04CF8C008C429A /* MDConfigManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 764716842C04CF8C008C429A /* MDConfigManager.h */; };
+		764716872C04CF8C008C429A /* MDConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 764716862C04CF8C008C429A /* MDConfigManager.m */; };
+		764716892C04CF8C008C429A /* MDCycriptManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 764716882C04CF8C008C429A /* MDCycriptManager.h */; };
+		7647168B2C04CF8C008C429A /* MDCycriptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7647168A2C04CF8C008C429A /* MDCycriptManager.m */; };
+		7647168D2C04CF8C008C429A /* MDMethodTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = 7647168C2C04CF8C008C429A /* MDMethodTrace.h */; };
+		7647168F2C04CF8C008C429A /* MDMethodTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 7647168E2C04CF8C008C429A /* MDMethodTrace.m */; };
+		764716922C04CF8C008C429A /* a1a2-selectortramps-arm.s in Sources */ = {isa = PBXBuildFile; fileRef = 764716912C04CF8C008C429A /* a1a2-selectortramps-arm.s */; };
+		764716942C04CF8C008C429A /* a1a2-selectortramps-arm64.s in Sources */ = {isa = PBXBuildFile; fileRef = 764716932C04CF8C008C429A /* a1a2-selectortramps-arm64.s */; };
+		764716962C04CF8C008C429A /* a1a2-selectortramps-i386.s in Sources */ = {isa = PBXBuildFile; fileRef = 764716952C04CF8C008C429A /* a1a2-selectortramps-i386.s */; };
+		764716982C04CF8C008C429A /* a1a2-selectortramps-x86_64.s in Sources */ = {isa = PBXBuildFile; fileRef = 764716972C04CF8C008C429A /* a1a2-selectortramps-x86_64.s */; };
+		7647169A2C04CF8C008C429A /* a2a3-selectortramps-arm.s in Sources */ = {isa = PBXBuildFile; fileRef = 764716992C04CF8C008C429A /* a2a3-selectortramps-arm.s */; };
+		7647169C2C04CF8C008C429A /* a2a3-selectortramps-i386.s in Sources */ = {isa = PBXBuildFile; fileRef = 7647169B2C04CF8C008C429A /* a2a3-selectortramps-i386.s */; };
+		7647169E2C04CF8C008C429A /* a2a3-selectortramps-x86_64.s in Sources */ = {isa = PBXBuildFile; fileRef = 7647169D2C04CF8C008C429A /* a2a3-selectortramps-x86_64.s */; };
+		764716A02C04CF8C008C429A /* OCMethodTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = 7647169F2C04CF8C008C429A /* OCMethodTrace.h */; };
+		764716A22C04CF8C008C429A /* OCMethodTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 764716A12C04CF8C008C429A /* OCMethodTrace.m */; };
+		764716A42C04CF8C008C429A /* OCSelectorTrampolines.h in Headers */ = {isa = PBXBuildFile; fileRef = 764716A32C04CF8C008C429A /* OCSelectorTrampolines.h */; };
+		764716A62C04CF8C008C429A /* OCSelectorTrampolines.mm in Sources */ = {isa = PBXBuildFile; fileRef = 764716A52C04CF8C008C429A /* OCSelectorTrampolines.mm */; };
+		764716AA2C04CF8C008C429A /* LLDBTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 764716A92C04CF8C008C429A /* LLDBTools.h */; };
+		764716AC2C04CF8C008C429A /* LLDBTools.mm in Sources */ = {isa = PBXBuildFile; fileRef = 764716AB2C04CF8C008C429A /* LLDBTools.mm */; };
+		764716B12C04CF8C008C429A /* AntiAntiDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 764716B02C04CF8C008C429A /* AntiAntiDebug.m */; };
+		764716B42C04CF8C008C429A /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = 764716B32C04CF8C008C429A /* fishhook.c */; };
+		764716B62C04CF8C008C429A /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = 764716B52C04CF8C008C429A /* fishhook.h */; };
+		764716B82C04CF8C008C429A /* TweetieDylib.h in Headers */ = {isa = PBXBuildFile; fileRef = 764716B72C04CF8C008C429A /* TweetieDylib.h */; };
+		764716BA2C04CF8C008C429A /* TweetieDylib.m in Sources */ = {isa = PBXBuildFile; fileRef = 764716B92C04CF8C008C429A /* TweetieDylib.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		764716752C04CF8C008C429A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 764716572C04CF8C008C429A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 764716722C04CF8C008C429A;
+			remoteInfo = TweetieDylib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7647165F2C04CF8C008C429A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				764716742C04CF8C008C429A /* libTweetieDylib.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		764716622C04CF8C008C429A /* Tweetie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tweetie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		764716652C04CF8C008C429A /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		764716672C04CF8C008C429A /* quick-resign.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "quick-resign.sh"; sourceTree = "<group>"; };
+		764716692C04CF8C008C429A /* MDConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MDConfig.plist; sourceTree = "<group>"; };
+		7647166C2C04CF8C008C429A /* put ipa or app here */ = {isa = PBXFileReference; lastKnownFileType = text; path = "put ipa or app here"; sourceTree = "<group>"; };
+		7647166D2C04CF8C008C429A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		764716732C04CF8C008C429A /* libTweetieDylib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libTweetieDylib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		764716782C04CF8C008C429A /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		7647167A2C04CF8C008C429A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7647167C2C04CF8C008C429A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		764716802C04CF8C008C429A /* TweetieDylib.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = TweetieDylib.xm; sourceTree = "<group>"; };
+		764716812C04CF8C008C429A /* TweetieDylib.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TweetieDylib.mm; sourceTree = "<group>"; };
+		764716842C04CF8C008C429A /* MDConfigManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDConfigManager.h; sourceTree = "<group>"; };
+		764716862C04CF8C008C429A /* MDConfigManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDConfigManager.m; sourceTree = "<group>"; };
+		764716882C04CF8C008C429A /* MDCycriptManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDCycriptManager.h; sourceTree = "<group>"; };
+		7647168A2C04CF8C008C429A /* MDCycriptManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDCycriptManager.m; sourceTree = "<group>"; };
+		7647168C2C04CF8C008C429A /* MDMethodTrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDMethodTrace.h; sourceTree = "<group>"; };
+		7647168E2C04CF8C008C429A /* MDMethodTrace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDMethodTrace.m; sourceTree = "<group>"; };
+		764716912C04CF8C008C429A /* a1a2-selectortramps-arm.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a1a2-selectortramps-arm.s"; sourceTree = "<group>"; };
+		764716932C04CF8C008C429A /* a1a2-selectortramps-arm64.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a1a2-selectortramps-arm64.s"; sourceTree = "<group>"; };
+		764716952C04CF8C008C429A /* a1a2-selectortramps-i386.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a1a2-selectortramps-i386.s"; sourceTree = "<group>"; };
+		764716972C04CF8C008C429A /* a1a2-selectortramps-x86_64.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a1a2-selectortramps-x86_64.s"; sourceTree = "<group>"; };
+		764716992C04CF8C008C429A /* a2a3-selectortramps-arm.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a2a3-selectortramps-arm.s"; sourceTree = "<group>"; };
+		7647169B2C04CF8C008C429A /* a2a3-selectortramps-i386.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a2a3-selectortramps-i386.s"; sourceTree = "<group>"; };
+		7647169D2C04CF8C008C429A /* a2a3-selectortramps-x86_64.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a2a3-selectortramps-x86_64.s"; sourceTree = "<group>"; };
+		7647169F2C04CF8C008C429A /* OCMethodTrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCMethodTrace.h; sourceTree = "<group>"; };
+		764716A12C04CF8C008C429A /* OCMethodTrace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCMethodTrace.m; sourceTree = "<group>"; };
+		764716A32C04CF8C008C429A /* OCSelectorTrampolines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCSelectorTrampolines.h; sourceTree = "<group>"; };
+		764716A52C04CF8C008C429A /* OCSelectorTrampolines.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OCSelectorTrampolines.mm; sourceTree = "<group>"; };
+		764716A72C04CF8C008C429A /* selectortramps.mac */ = {isa = PBXFileReference; lastKnownFileType = text; path = selectortramps.mac; sourceTree = "<group>"; };
+		764716A92C04CF8C008C429A /* LLDBTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLDBTools.h; sourceTree = "<group>"; };
+		764716AB2C04CF8C008C429A /* LLDBTools.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LLDBTools.mm; sourceTree = "<group>"; };
+		764716AE2C04CF8C008C429A /* TweetieDylib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "TweetieDylib-Prefix.pch"; path = "../TweetieDylib-Prefix.pch"; sourceTree = "<group>"; };
+		764716B02C04CF8C008C429A /* AntiAntiDebug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AntiAntiDebug.m; sourceTree = "<group>"; };
+		764716B32C04CF8C008C429A /* fishhook.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
+		764716B52C04CF8C008C429A /* fishhook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
+		764716B72C04CF8C008C429A /* TweetieDylib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TweetieDylib.h; sourceTree = "<group>"; };
+		764716B92C04CF8C008C429A /* TweetieDylib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TweetieDylib.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7647165C2C04CF8C008C429A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		764716702C04CF8C008C429A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				764716792C04CF8C008C429A /* JavaScriptCore.framework in Frameworks */,
+				7647167D2C04CF8C008C429A /* UIKit.framework in Frameworks */,
+				7647167B2C04CF8C008C429A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		764716562C04CF8C008C429A = {
+			isa = PBXGroup;
+			children = (
+				764716642C04CF8C008C429A /* Tweetie */,
+				7647167E2C04CF8C008C429A /* TweetieDylib */,
+				764716772C04CF8C008C429A /* Frameworks */,
+				764716632C04CF8C008C429A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		764716632C04CF8C008C429A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				764716622C04CF8C008C429A /* Tweetie.app */,
+				764716732C04CF8C008C429A /* libTweetieDylib.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		764716642C04CF8C008C429A /* Tweetie */ = {
+			isa = PBXGroup;
+			children = (
+				764716652C04CF8C008C429A /* icon.png */,
+				7647166D2C04CF8C008C429A /* Info.plist */,
+				764716662C04CF8C008C429A /* Scripts */,
+				764716682C04CF8C008C429A /* Config */,
+				7647166B2C04CF8C008C429A /* TargetApp */,
+			);
+			path = Tweetie;
+			sourceTree = "<group>";
+		};
+		764716662C04CF8C008C429A /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				764716672C04CF8C008C429A /* quick-resign.sh */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		764716682C04CF8C008C429A /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				764716692C04CF8C008C429A /* MDConfig.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		7647166B2C04CF8C008C429A /* TargetApp */ = {
+			isa = PBXGroup;
+			children = (
+				7647166C2C04CF8C008C429A /* put ipa or app here */,
+			);
+			path = TargetApp;
+			sourceTree = "<group>";
+		};
+		764716772C04CF8C008C429A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				764716782C04CF8C008C429A /* JavaScriptCore.framework */,
+				7647167A2C04CF8C008C429A /* Foundation.framework */,
+				7647167C2C04CF8C008C429A /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7647167E2C04CF8C008C429A /* TweetieDylib */ = {
+			isa = PBXGroup;
+			children = (
+				764716B72C04CF8C008C429A /* TweetieDylib.h */,
+				764716B92C04CF8C008C429A /* TweetieDylib.m */,
+				7647167F2C04CF8C008C429A /* Logos */,
+				764716832C04CF8C008C429A /* Config */,
+				764716902C04CF8C008C429A /* Trace */,
+				764716A82C04CF8C008C429A /* Tools */,
+				764716AF2C04CF8C008C429A /* AntiAntiDebug */,
+				764716B22C04CF8C008C429A /* fishhook */,
+				764716AD2C04CF8C008C429A /* Supporting Files */,
+			);
+			path = TweetieDylib;
+			sourceTree = "<group>";
+		};
+		7647167F2C04CF8C008C429A /* Logos */ = {
+			isa = PBXGroup;
+			children = (
+				764716802C04CF8C008C429A /* TweetieDylib.xm */,
+				764716812C04CF8C008C429A /* TweetieDylib.mm */,
+			);
+			path = Logos;
+			sourceTree = "<group>";
+		};
+		764716832C04CF8C008C429A /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				764716842C04CF8C008C429A /* MDConfigManager.h */,
+				764716862C04CF8C008C429A /* MDConfigManager.m */,
+				764716882C04CF8C008C429A /* MDCycriptManager.h */,
+				7647168A2C04CF8C008C429A /* MDCycriptManager.m */,
+				7647168C2C04CF8C008C429A /* MDMethodTrace.h */,
+				7647168E2C04CF8C008C429A /* MDMethodTrace.m */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		764716902C04CF8C008C429A /* Trace */ = {
+			isa = PBXGroup;
+			children = (
+				764716912C04CF8C008C429A /* a1a2-selectortramps-arm.s */,
+				764716932C04CF8C008C429A /* a1a2-selectortramps-arm64.s */,
+				764716952C04CF8C008C429A /* a1a2-selectortramps-i386.s */,
+				764716972C04CF8C008C429A /* a1a2-selectortramps-x86_64.s */,
+				764716992C04CF8C008C429A /* a2a3-selectortramps-arm.s */,
+				7647169B2C04CF8C008C429A /* a2a3-selectortramps-i386.s */,
+				7647169D2C04CF8C008C429A /* a2a3-selectortramps-x86_64.s */,
+				7647169F2C04CF8C008C429A /* OCMethodTrace.h */,
+				764716A12C04CF8C008C429A /* OCMethodTrace.m */,
+				764716A32C04CF8C008C429A /* OCSelectorTrampolines.h */,
+				764716A52C04CF8C008C429A /* OCSelectorTrampolines.mm */,
+				764716A72C04CF8C008C429A /* selectortramps.mac */,
+			);
+			path = Trace;
+			sourceTree = "<group>";
+		};
+		764716A82C04CF8C008C429A /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				764716A92C04CF8C008C429A /* LLDBTools.h */,
+				764716AB2C04CF8C008C429A /* LLDBTools.mm */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		764716AD2C04CF8C008C429A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				764716AE2C04CF8C008C429A /* TweetieDylib-Prefix.pch */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		764716AF2C04CF8C008C429A /* AntiAntiDebug */ = {
+			isa = PBXGroup;
+			children = (
+				764716B02C04CF8C008C429A /* AntiAntiDebug.m */,
+			);
+			path = AntiAntiDebug;
+			sourceTree = "<group>";
+		};
+		764716B22C04CF8C008C429A /* fishhook */ = {
+			isa = PBXGroup;
+			children = (
+				764716B32C04CF8C008C429A /* fishhook.c */,
+				764716B52C04CF8C008C429A /* fishhook.h */,
+			);
+			path = fishhook;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		764716712C04CF8C008C429A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				764716892C04CF8C008C429A /* MDCycriptManager.h in Headers */,
+				7647168D2C04CF8C008C429A /* MDMethodTrace.h in Headers */,
+				764716B62C04CF8C008C429A /* fishhook.h in Headers */,
+				764716AA2C04CF8C008C429A /* LLDBTools.h in Headers */,
+				764716852C04CF8C008C429A /* MDConfigManager.h in Headers */,
+				764716A42C04CF8C008C429A /* OCSelectorTrampolines.h in Headers */,
+				764716A02C04CF8C008C429A /* OCMethodTrace.h in Headers */,
+				764716B82C04CF8C008C429A /* TweetieDylib.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		764716612C04CF8C008C429A /* Tweetie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 764716C02C04CF8C008C429A /* Build configuration list for PBXNativeTarget "Tweetie" */;
+			buildPhases = (
+				7647165B2C04CF8C008C429A /* Sources */,
+				7647165C2C04CF8C008C429A /* Frameworks */,
+				7647165D2C04CF8C008C429A /* ShellScript */,
+				7647165E2C04CF8C008C429A /* Resources */,
+				7647165F2C04CF8C008C429A /* CopyFiles */,
+				764716602C04CF8C008C429A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				764716762C04CF8C008C429A /* PBXTargetDependency */,
+			);
+			name = Tweetie;
+			productName = Tweetie;
+			productReference = 764716622C04CF8C008C429A /* Tweetie.app */;
+			productType = "com.apple.product-type.application";
+		};
+		764716722C04CF8C008C429A /* TweetieDylib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 764716BD2C04CF8C008C429A /* Build configuration list for PBXNativeTarget "TweetieDylib" */;
+			buildPhases = (
+				7647166E2C04CF8C008C429A /* ShellScript */,
+				7647166F2C04CF8C008C429A /* Sources */,
+				764716702C04CF8C008C429A /* Frameworks */,
+				764716712C04CF8C008C429A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TweetieDylib;
+			productName = TweetieDylib;
+			productReference = 764716732C04CF8C008C429A /* libTweetieDylib.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		764716572C04CF8C008C429A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					764716612C04CF8C008C429A = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					764716722C04CF8C008C429A = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 7647165A2C04CF8C008C429A /* Build configuration list for PBXProject "Tweetie" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 764716562C04CF8C008C429A;
+			productRefGroup = 764716632C04CF8C008C429A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				764716612C04CF8C008C429A /* Tweetie */,
+				764716722C04CF8C008C429A /* TweetieDylib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7647165E2C04CF8C008C429A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7647166A2C04CF8C008C429A /* MDConfig.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7647165D2C04CF8C008C429A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = /opt/MonkeyDev/Tools/pack.sh;
+		};
+		764716602C04CF8C008C429A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/Tools/pack.sh codesign";
+		};
+		7647166E2C04CF8C008C429A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp-logos";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7647165B2C04CF8C008C429A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7647166F2C04CF8C008C429A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7647168B2C04CF8C008C429A /* MDCycriptManager.m in Sources */,
+				764716BA2C04CF8C008C429A /* TweetieDylib.m in Sources */,
+				764716942C04CF8C008C429A /* a1a2-selectortramps-arm64.s in Sources */,
+				764716922C04CF8C008C429A /* a1a2-selectortramps-arm.s in Sources */,
+				764716982C04CF8C008C429A /* a1a2-selectortramps-x86_64.s in Sources */,
+				764716A22C04CF8C008C429A /* OCMethodTrace.m in Sources */,
+				764716872C04CF8C008C429A /* MDConfigManager.m in Sources */,
+				764716B42C04CF8C008C429A /* fishhook.c in Sources */,
+				764716B12C04CF8C008C429A /* AntiAntiDebug.m in Sources */,
+				764716A62C04CF8C008C429A /* OCSelectorTrampolines.mm in Sources */,
+				764716962C04CF8C008C429A /* a1a2-selectortramps-i386.s in Sources */,
+				7647169C2C04CF8C008C429A /* a2a3-selectortramps-i386.s in Sources */,
+				7647169A2C04CF8C008C429A /* a2a3-selectortramps-arm.s in Sources */,
+				764716822C04CF8C008C429A /* TweetieDylib.mm in Sources */,
+				764716AC2C04CF8C008C429A /* LLDBTools.mm in Sources */,
+				7647169E2C04CF8C008C429A /* a2a3-selectortramps-x86_64.s in Sources */,
+				7647168F2C04CF8C008C429A /* MDMethodTrace.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		764716762C04CF8C008C429A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 764716722C04CF8C008C429A /* TweetieDylib */;
+			targetProxy = 764716752C04CF8C008C429A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		764716BB2C04CF8C008C429A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		764716BC2C04CF8C008C429A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		764716BE2C04CF8C008C429A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UGK9FAJ697;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks/**",
+					"$(MonkeyDevPath)/Librarys/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TweetieDylib/TweetieDylib-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/include",
+					"$(MonkeyDevTheosPath)/vendor/include/**",
+				);
+				INSTALL_PATH = "@executable_path/Frameworks/libTweetieDylib.dylib";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks",
+					"$(MonkeyDevTheosPath)/vendor/lib/**",
+				);
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DTHEOS_INSTANCE_NAME=\"\\\"TweetieDylib\\\"\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-weak_library",
+					"/usr/lib/libc++.dylib",
+					"-weak_library",
+					"/usr/lib/libstdc++.dylib",
+					"-weak_library",
+					"$(MonkeyDevPath)/Frameworks/libsubstrate.dylib",
+					"-lcycript",
+					"-framework",
+					RevealServer,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		764716BF2C04CF8C008C429A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = UGK9FAJ697;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks/**",
+					"$(MonkeyDevPath)/Librarys/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TweetieDylib/TweetieDylib-Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/include",
+					"$(MonkeyDevTheosPath)/vendor/include/**",
+				);
+				INSTALL_PATH = "@executable_path/Frameworks/libTweetieDylib.dylib";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks",
+					"$(MonkeyDevTheosPath)/vendor/lib/**",
+				);
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DTHEOS_INSTANCE_NAME=\"\\\"TweetieDylib\\\"\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-weak_library",
+					"/usr/lib/libc++.dylib",
+					"-weak_library",
+					"/usr/lib/libstdc++.dylib",
+					"-weak_library",
+					"$(MonkeyDevPath)/Frameworks/libsubstrate.dylib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		764716C12C04CF8C008C429A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UGK9FAJ697;
+				ENABLE_BITCODE = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				MONKEYDEV_ADD_SUBSTRATE = YES;
+				MONKEYDEV_CLASS_DUMP = NO;
+				MONKEYDEV_DEFAULT_BUNDLEID = NO;
+				MONKEYDEV_INSERT_DYLIB = YES;
+				MONKEYDEV_RESTORE_SYMBOL = NO;
+				MONKEYDEV_TARGET_APP = Optional;
+				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_BUNDLE_IDENTIFIER = com.simpzan.Tweetie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		764716C22C04CF8C008C429A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UGK9FAJ697;
+				ENABLE_BITCODE = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				MONKEYDEV_ADD_SUBSTRATE = YES;
+				MONKEYDEV_CLASS_DUMP = NO;
+				MONKEYDEV_DEFAULT_BUNDLEID = NO;
+				MONKEYDEV_INSERT_DYLIB = YES;
+				MONKEYDEV_RESTORE_SYMBOL = NO;
+				MONKEYDEV_TARGET_APP = Optional;
+				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_BUNDLE_IDENTIFIER = com.simpzan.Tweetie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7647165A2C04CF8C008C429A /* Build configuration list for PBXProject "Tweetie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				764716BB2C04CF8C008C429A /* Debug */,
+				764716BC2C04CF8C008C429A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		764716BD2C04CF8C008C429A /* Build configuration list for PBXNativeTarget "TweetieDylib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				764716BE2C04CF8C008C429A /* Debug */,
+				764716BF2C04CF8C008C429A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		764716C02C04CF8C008C429A /* Build configuration list for PBXNativeTarget "Tweetie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				764716C12C04CF8C008C429A /* Debug */,
+				764716C22C04CF8C008C429A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 764716572C04CF8C008C429A /* Project object */;
+}
