@@ -3,6 +3,19 @@
 #import <UIKit/UIKit.h>
 
 
+@interface BHCustomTabBarUtility: NSObject
++ (NSArray<NSString *> *)getHiddenTabBars;
+@end
+%hook BHCustomTabBarUtility
++ (NSArray<NSString *> *)getHiddenTabBars {
+    NSArray *immutableArray = %orig;
+    NSMutableArray *mutableArray = [immutableArray mutableCopy];
+    [mutableArray addObject:@"grok"];
+    return mutableArray;
+}
+%end
+
+
 %hook NSURLSessionTask
 - (void)resume {
     NSURLRequest *request = self.originalRequest;
