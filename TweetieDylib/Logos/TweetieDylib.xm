@@ -2,6 +2,26 @@
 
 #import <UIKit/UIKit.h>
 
+
+%hook NSURLSessionTask
+- (void)resume {
+    NSURLRequest *request = self.originalRequest;
+    if ([request.URL.lastPathComponent isEqualToString:@"HomeTimeline"]) {
+        static NSDate *lastTime = [NSDate dateWithTimeIntervalSince1970:0];
+        NSDate *currentDate = [NSDate date];
+        if ([currentDate timeIntervalSinceDate:lastTime] >= 6 * 60 * 60) {
+            lastTime = currentDate;
+            %orig;
+        } else {
+            NSLog(@"[sam] skip %@", request.URL);
+        }
+    } else {
+        %orig;
+    }
+}
+%end
+
+
 @interface CustomViewController
 
 @property (nonatomic, copy) NSString* newProperty;

@@ -73,7 +73,7 @@
 		764716782C04CF8C008C429A /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		7647167A2C04CF8C008C429A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7647167C2C04CF8C008C429A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		764716802C04CF8C008C429A /* TweetieDylib.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = TweetieDylib.xm; sourceTree = "<group>"; };
+		764716802C04CF8C008C429A /* TweetieDylib.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = TweetieDylib.xm; sourceTree = "<group>"; };
 		764716812C04CF8C008C429A /* TweetieDylib.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TweetieDylib.mm; sourceTree = "<group>"; };
 		764716842C04CF8C008C429A /* MDConfigManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDConfigManager.h; sourceTree = "<group>"; };
 		764716862C04CF8C008C429A /* MDConfigManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDConfigManager.m; sourceTree = "<group>"; };
