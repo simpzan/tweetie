@@ -16,21 +16,30 @@
 %end
 
 
+static int shouldSkipRequest(NSURL *url) {
+    BOOL isHomeTimeline = [url.lastPathComponent isEqualToString:@"HomeTimeline"];
+    if (!isHomeTimeline) return NO;
+
+    BOOL hasCursorKey = [url.query rangeOfString:@"%22cursor%22%3A%22"].location != NSNotFound;
+    if (!hasCursorKey) return NO;
+
+    static NSDate *lastTime = NULL;
+    if (!lastTime) lastTime = [NSDate dateWithTimeIntervalSince1970:0];
+    NSDate *currentDate = [NSDate date];
+    BOOL shouldSkip = [currentDate timeIntervalSinceDate:lastTime] < 6 * 60 * 60;
+    if (shouldSkip) return YES;
+
+    lastTime = currentDate;
+    return NO;
+}
 %hook NSURLSessionTask
 - (void)resume {
     NSURLRequest *request = self.originalRequest;
-    if ([request.URL.lastPathComponent isEqualToString:@"HomeTimeline"]) {
-        static NSDate *lastTime = [NSDate dateWithTimeIntervalSince1970:0];
-        NSDate *currentDate = [NSDate date];
-        if ([currentDate timeIntervalSinceDate:lastTime] >= 6 * 60 * 60) {
-            lastTime = currentDate;
-            %orig;
-        } else {
-            NSLog(@"[sam] skip %@", request.URL);
-        }
-    } else {
-        %orig;
-    }
+    NSURL *url = request.URL;
+    BOOL shouldSkip = shouldSkipRequest(url);
+//    NSString *action = shouldSkip ? @"skip" : @"resume";
+//    NSLog(@"[sam] %@ %@", action, url);
+    if (!shouldSkip) %orig;
 }
 %end
 
