@@ -44,6 +44,20 @@ static int shouldSkipRequest(NSURL *url) {
 %end
 
 
+@interface THFHomeTimelineItemsViewController
+@property(nonatomic) _Bool pullToLoadTopEnabled;
+@end
+@interface THFHomeTimelineContainerViewController
+@property(readonly, nonatomic) THFHomeTimelineItemsViewController *homeTimelineViewController;
+@end
+%hook THFHomeTimelineContainerViewController
+- (void)viewDidLoad {
+    %orig;
+    self.homeTimelineViewController.pullToLoadTopEnabled = NO;
+}
+%end
+
+
 @interface CustomViewController
 
 @property (nonatomic, copy) NSString* newProperty;
