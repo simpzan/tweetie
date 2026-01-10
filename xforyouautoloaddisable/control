@@ -1,0 +1,9 @@
+Package: com.yourcompany.xforyouautoloaddisable
+Name: x_foryou_autoload_disable
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: simpzan
+Author: simpzan
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000)

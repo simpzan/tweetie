@@ -3,3 +3,4 @@ LatestBuild
 TweetieDylib/Logos/TweetieDylib.mm
 Tweetie/icon.png
 Tweetie/Info.plist
+*.dylib
