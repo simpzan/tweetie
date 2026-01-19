@@ -10,11 +10,3 @@ xforyouautoloaddisable_FILES = Tweak.x
 xforyouautoloaddisable_CFLAGS = -fobjc-arc
 
 include $(THEOS_MAKE_PATH)/tweak.mk
-
-
-build: 
-	cp ./.theos/obj/xforyouautoloaddisable.dylib .
-	install_name_tool -id @rpath/CydiaSubstrate.framework/CydiaSubstrate xforyouautoloaddisable.dylib
-	install_name_tool -change /Library/Frameworks/CydiaSubstrate.framework/CydiaSubstrate @rpath/CydiaSubstrate.framework/CydiaSubstrate xforyouautoloaddisable.dylib
-	ls -alh xforyouautoloaddisable.dylib
-	echo "done"
