@@ -11,23 +11,19 @@ build() {
 }
 
 install() {
-  	xcrun devicectl device copy to \
-		--device "AAB6300C-C853-549F-84A1-17D9DA2C20E7" \
-		--domain-identifier "com.kdt.livecontainer.4NF4SBWC2N" \
-		--domain-type appDataContainer \
-		--destination "Documents/Tweaks/Twitter/xforyouautoloaddisable.dylib" \
-		--source "xforyouautoloaddisable.dylib"
-	xcrun devicectl device info files \
-		--device "AAB6300C-C853-549F-84A1-17D9DA2C20E7" \
-		--domain-identifier com.kdt.livecontainer.4NF4SBWC2N \
-		--domain-type appDataContainer \
+	set -x
+	devctl="xcrun devicectl device"
+	device="--device AAB6300C-C853-549F-84A1-17D9DA2C20E7"
+	app="--domain-identifier com.kdt.livecontainer.4NF4SBWC2N --domain-type appDataContainer"
+
+	$devctl copy to $device $app \
+		--source "xforyouautoloaddisable.dylib" \
+		--destination "Documents/Tweaks/Twitter/xforyouautoloaddisable.dylib"
+	$devctl info files $device $app \
 		--subdirectory Documents/Tweaks/
 
-	pid=`xcrun devicectl device info processes  --device "AAB6300C-C853-549F-84A1-17D9DA2C20E7" | grep LiveContainer | awk '{print $1}' `
-	echo "pid is $pid"
-	xcrun devicectl device process terminate \
-		--device "AAB6300C-C853-549F-84A1-17D9DA2C20E7" \
-		--pid $pid
+	pid=`$devctl info processes $device | grep LiveContainer | awk '{print $1}' `
+	$devctl process terminate $device --pid $pid
 }
 
 test() {
