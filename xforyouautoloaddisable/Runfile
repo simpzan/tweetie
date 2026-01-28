@@ -31,7 +31,7 @@ test() {
 	set -x
 	build
 	install
-	idevicesyslog | tee log | grep LiveContainer
+	idevicesyslog -n | tee log | grep LiveContainer
 }
 
 main_() {
