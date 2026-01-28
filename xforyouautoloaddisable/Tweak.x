@@ -14,13 +14,19 @@ static int shouldSkipRequest(NSURL *url) {
     BOOL hasCursorKey = [url.query rangeOfString:@"%22cursor%22%3A%22"].location != NSNotFound;
     if (!hasCursorKey) return NO;
 
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *key = @"xforyouautoloaddisable_lastTime";
     static NSDate *lastTime = NULL;
-    if (!lastTime) lastTime = [NSDate dateWithTimeIntervalSince1970:0];
+    if (!lastTime) {
+        NSTimeInterval lastTimestamp = [defaults doubleForKey:key];
+        lastTime = [NSDate dateWithTimeIntervalSince1970:lastTimestamp];
+    }
     NSDate *currentDate = [NSDate date];
-    BOOL shouldSkip = [currentDate timeIntervalSinceDate:lastTime] < 6 * 60 * 60;
+    BOOL shouldSkip = [currentDate timeIntervalSinceDate:lastTime] < 3 * 60 * 60;
     if (shouldSkip) return YES;
 
     lastTime = currentDate;
+    [defaults setDouble:[currentDate timeIntervalSince1970] forKey:key];
     return NO;
 }
 %hook NSURLSessionTask
@@ -28,8 +34,11 @@ static int shouldSkipRequest(NSURL *url) {
     NSURLRequest *request = self.originalRequest;
     NSURL *url = request.URL;
     BOOL shouldSkip = shouldSkipRequest(url);
-//    NSString *action = shouldSkip ? @"skip" : @"resume";
-//    NSLog(@"[sam] %@ %@", action, url);
-    if (!shouldSkip) %orig;
+    NSString *action = shouldSkip ? @"skip" : @"resume";
+    if (!shouldSkip) {
+        %orig;
+        return;
+    }
+    NSLog(@"[sam] %@ %@", action, url);
 }
 %end
