@@ -3,6 +3,7 @@ set -euo pipefail
 help() { echo "run, the minimalist's task runner - https://github.com/simpzan/run"; }
 
 build() {
+	export THEOS=/opt/theos
   	make package FINALPACKAGE=1
 	cp ./.theos/obj/xforyouautoloaddisable.dylib .
 	install_name_tool -id @rpath/CydiaSubstrate.framework/CydiaSubstrate xforyouautoloaddisable.dylib
